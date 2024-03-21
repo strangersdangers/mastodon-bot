@@ -19,6 +19,7 @@ def post():
   randomquote = []
   dogurl = []
   imagetoget = []
+  image = []
   data2 = []
   if type == 'text':
     randomquote = requests.get("https://api.quotable.io/quotes/random")
@@ -30,6 +31,7 @@ def post():
     dogurl = requests.get("https://dog.ceo/api/breeds/image/random")
     data2 = dogurl.json()
     imagetoget = requests.get(data2["message"])
+    image = imagetoget.content
     print(data2)
     mastodon.media_post(imagetoget, 'image/jpeg')
     return 'posted img'
