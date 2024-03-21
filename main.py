@@ -7,5 +7,5 @@ mastodon = Mastodon(
   api_base_url=os.getenv('INSTURL')
 )
 
-mastodon.status_post('Is this working chat?')
+mastodon.toot('Toot.')
 keep_alive()
