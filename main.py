@@ -25,11 +25,13 @@ def post():
     data = randomquote.json()
     quote = f"woke up from my break just to post this. heres a quote for yall: {data['content']} -{data['author']}"
     mastodon.toot(quote)
+    return "posted text"
     if type == 'img':
       dogurl = requests.get("https://dog.ceo/api/breeds/image/random")
       data2 = dogurl.json()
       imagetoget = requests.get(data2['message']).content
       mastodon.media_post(imagetoget, 'image/jpg')
+      return "posted img"
       #end.. or is it?
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=3000)
