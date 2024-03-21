@@ -32,6 +32,8 @@ def post():
     imagetoget = requests.get(data2['message']).content
     mastodon.media_post(imagetoget, 'image/jpg')
     return 'posted img'
+  elif type is None:
+    return "yooo"
     #end.. or is it?
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=3000)
