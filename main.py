@@ -1,5 +1,6 @@
 from mastodon import Mastodon
 import os
+from thingtons import keep_alive
 
 mastodon = Mastodon(
   access_token=os.getenv('TOKEN'),
@@ -7,3 +8,4 @@ mastodon = Mastodon(
 )
 
 mastodon.status_post('Is this working chat?')
+keep_alive()
