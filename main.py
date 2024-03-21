@@ -1,4 +1,5 @@
 from mastodon import Mastodon
+import os
 
 mastodon = Mastodon(
   access_token=os.getenv('TOKEN'),
