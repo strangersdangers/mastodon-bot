@@ -23,7 +23,7 @@ def post():
   if type == 'text':
     randomquote = requests.get("https://api.quotable.io/quotes/random")
     data = randomquote.json()
-    quote = 'woke up from my break just to post this. heres a quote for yall: ' + data['content'] + ' -' + data['author']
+    quote = f"woke up from my break just to post this. heres a quote for yall: {data['content']} -{data['author']}"
     mastodon.toot(quote)
     if type == 'img':
       dogurl = requests.get("https://dog.ceo/api/breeds/image/random")
