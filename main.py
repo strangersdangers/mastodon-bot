@@ -30,6 +30,7 @@ def post():
     dogurl = requests.get("https://dog.ceo/api/breeds/image/random")
     data2 = dogurl.json()
     imagetoget = requests.get(data2['message']).content
+    print(data2)
     mastodon.media_post(imagetoget, 'image/jpg')
     return 'posted img'
   elif type is None:
