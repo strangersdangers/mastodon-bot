@@ -33,7 +33,7 @@ def post():
     imagetoget = requests.get(data2["message"])
     image = imagetoget.content
     print(data2)
-    mastodon.media_post(imagetoget, 'image/jpeg')
+    mastodon.media_post(image, 'image/jpeg')
     return 'posted img'
   elif type is None:
     return "yooo"
