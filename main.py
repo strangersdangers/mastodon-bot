@@ -1,8 +1,7 @@
 from mastodon import Mastodon
 import os
 #from thingtons import keep_alive
-from flask import Flask
-import request
+from flask import Flask, request
 import requests
 
 app = Flask(__name__)
