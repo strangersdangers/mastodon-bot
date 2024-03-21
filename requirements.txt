@@ -1,2 +1,2 @@
-Mastodon.py @ git+https://github.com/mastodon/mastodon.git
+Mastodon.py @ git+https://github.com/halcy/Mastodon.py.git
 Flask
