@@ -33,7 +33,7 @@ def post():
       mastodon.media_post(imagetoget, 'image/jpg')
       return 'posted img'
     else:
-      return "yo wassup you just hit the hood"
+      return make_response("yo wassup you just hit the hood")
       #end.. or is it?
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=3000)
