@@ -29,9 +29,9 @@ def post():
   elif type == 'img':
     dogurl = requests.get("https://dog.ceo/api/breeds/image/random")
     data2 = dogurl.json()
-    imagetoget = requests.get(data2['message']).content
+    imagetoget = requests.get(data2["message"]).content
     print(data2)
-    mastodon.media_post(imagetoget, 'image/jpg')
+    mastodon.media_post(imagetoget, 'image/jpeg')
     return 'posted img'
   elif type is None:
     return "yooo"
