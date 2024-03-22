@@ -21,11 +21,12 @@ def post():
   imagetoget = []
   image = []
   data2 = []
+  test = []
   if type == 'text':
     randomquote = requests.get("https://api.quotable.io/quotes/random")
     data = randomquote.json()
     quote = f"woke up from my break just to post this. heres a quote for yall: {data[0]['content']} -{data[0]['author']}"
-    mastodon.toot(quote)
+    test = mastodon.toot(quote).url
     return 'posted text'
   elif type == 'img':
     dogurl = requests.get("https://dog.ceo/api/breeds/image/random")
