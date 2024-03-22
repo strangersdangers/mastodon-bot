@@ -5,7 +5,7 @@ This code used the **Quotable API** which was generously provided by **Luke Peav
 The code also used [dog.ceo](dog.ceo/dog-api)'s API to get the dog images, so please [donate to them here](https://paypal.me/dogapi)!
 
 # What is this?
-This is a small Python project that I made in 3 days or so, I don't really remember! 
+This is a small Python project that I made in 3 days or so, I don't really remember! I was inspired to create a Mastodon bot after discovering that you can make bots on Mastodon! 
 
 # How does it work?
 This bot will send a random dog image from the **dog.ceo** API if you hit the route **/post** with the following parameters:
