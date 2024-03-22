@@ -25,12 +25,18 @@ This bot will ALSO send a random quote from the **Quotable API** if you hit the 
 I recommend you to follow this **[guide](https://dev.to/botwiki/introduction-to-mastodon-bots-hfn)**
 
 # ACTUAL SETUP
-In your .env (or variables), create a variable named **"PASS"**, the value should be your password **(not the password to the Mastodon bot)**
+*1.* In your .env (or variables), create a variable named **"PASS"**, the value should be your **PASSWORD for the web** **(not the password to the Mastodon bot)**
 
-You need to also add a variable called **"TOKEN"**, the value should be the access token (located in the Development section).
+*2.* You need to also add a variable called **"TOKEN"**, the value should be the **access token** ( **Development** > **Your app** > **Access token**).
 
-And the last variable you need to add is **"INSTURL"**. The value of the variable should be the instance URL (the instance where you made the bot account at), **INCLUDING THE FULL URL, IT SHOULD HAVE THE "https://" OR "http://"**
+*3.* And the last variable you need to add is **"INSTURL"**. The value of the variable should be the instance URL (the instance where you made the bot account at), **INCLUDING THE FULL URL, IT SHOULD HAVE THE "https://" OR "http://"**
 
 **Posting schedule**
 
 The cons is that in the code, there is **no function for the bot to post on a schedule**, but you can use cron-job services online like [cron-job.org](console.cron-job.org)!
+
+# License
+This **code** uses the *MIT License*.
+
+# Contributions
+As I said earlier, this is just a small project, but all contributions are welcome. If you would like to make some **changes** to this code, go ahead!
