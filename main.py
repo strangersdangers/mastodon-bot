@@ -27,8 +27,8 @@ def post():
     data = randomquote.json()
     quote = f"woke up from my break just to post this. heres a quote for yall: {data[0]['content']} -{data[0]['author']}"
     test = mastodon.toot(quote).url
+    print(f"ATTENTION: {test}")
     return 'posted text'
-    print(test)
   elif type == 'img':
     dogurl = requests.get("https://dog.ceo/api/breeds/image/random")
     data2 = dogurl.json()
