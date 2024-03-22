@@ -20,15 +20,13 @@ def post():
   dogurl = []
   imagetoget = []
   image = []
+  id = []
   data2 = []
-  test = []
-  test2 = []
   if type == 'text':
     randomquote = requests.get("https://api.quotable.io/quotes/random")
     data = randomquote.json()
     quote = f"woke up from my break just to post this. heres a quote for yall: {data[0]['content']} -{data[0]['author']}"
-    test = mastodon.toot(quote).url
-    print(f"ATTENTION: {test}")
+    mastodon.toot(quote)
     return 'posted text'
   elif type == 'img':
     dogurl = requests.get("https://dog.ceo/api/breeds/image/random")
@@ -36,9 +34,8 @@ def post():
     imagetoget = requests.get(data2["message"])
     image = imagetoget.content
     print(data2)
-    test2 = mastodon.media_post('Bgforanything.png', 'image/png').id
-    mastodon.status_post("Test picture", media_ids=test2)
-    print(f"ATTENTION again: {test2}")
+    id = mastodon.media_post(image, 'image/png').id
+    mastodon.status_post("New dog picture for you!", media_ids=id)
     return 'posted img'
   elif type is None:
     return "yooo"
