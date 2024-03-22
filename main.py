@@ -22,6 +22,7 @@ def post():
   image = []
   data2 = []
   test = []
+  test2 = []
   if type == 'text':
     randomquote = requests.get("https://api.quotable.io/quotes/random")
     data = randomquote.json()
@@ -35,7 +36,9 @@ def post():
     imagetoget = requests.get(data2["message"])
     image = imagetoget.content
     print(data2)
-    mastodon.media_post('Bgforanything.png', 'image/png')
+    test2 = mastodon.media_post('Bgforanything.png', 'image/png').id
+    mastodon.status_post("Test picture", media_ids=test2)
+    print(f"ATTENTION again: {test2}")
     return 'posted img'
   elif type is None:
     return "yooo"
