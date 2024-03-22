@@ -21,6 +21,7 @@ This bot will ALSO send a random quote from the **Quotable API** if you hit the 
 # SETUP
 
 **HOW TO CREATE A BOT**
+
 I recommend you to follow this **[guide](https://dev.to/botwiki/introduction-to-mastodon-bots-hfn)**
 
 # ACTUAL SETUP
