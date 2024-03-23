@@ -12,7 +12,7 @@ testing = mastodon.account_verify_credentials().acct
 @app.route('/')
 def home():
   return "<h1>" + "Website proudly hosted by cyclic!" + "</h1>"
-  print(testing)
+  print(f"ATTENTION: {testing}")
   #end
 @app.route('/post')
 def post():
