@@ -42,7 +42,7 @@ def post():
       image = imagetoget.content
       print(data2)
       id = mastodon.media_post(image, 'image/png').id
-      mastodon.status_post("new dog picture for you\nprovided by dog.ceo \(thanks!\)", media_ids=id)
+      mastodon.status_post("new dog picture for you\nprovided by dog.ceo (thanks!)", media_ids=id)
       return 'posted img'
     elif type is None:
       return "yooo"
