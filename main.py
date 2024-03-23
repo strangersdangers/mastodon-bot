@@ -32,7 +32,7 @@ def post():
     if type == 'text':
       randomquote = requests.get("https://api.quotable.io/quotes/random")
       data = randomquote.json()
-      quote = f"A quote to start your day:\n {data[0]['content']} -{data[0]['author']}"
+      quote = f"A quote to start your day:\n \"{data[0]['content']}\" -{data[0]['author']}"
       mastodon.toot(quote)
       return 'posted text'
     elif type == 'img':
@@ -42,7 +42,7 @@ def post():
       image = imagetoget.content
       print(data2)
       id = mastodon.media_post(image, 'image/png').id
-      mastodon.status_post("dog picture for you\n provided by dog.ceo", media_ids=id)
+      mastodon.status_post("new dog picture for you\nprovided by dog.ceo \(thanks!\)", media_ids=id)
       return 'posted img'
     elif type is None:
       return "yooo"
