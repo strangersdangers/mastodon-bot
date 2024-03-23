@@ -10,7 +10,6 @@ mastodon = Mastodon(api_base_url = os.getenv('INSTURL'), access_token = os.geten
 @app.route('/')
 def home():
   return "<h1>" + "Website proudly hosted by cyclic!" + "</h1>"
-  print(f"ATTENTION, PLEASE VIEW TESTING: {testing}")
   #end
 @app.route('/post')
 def post():
