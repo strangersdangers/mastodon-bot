@@ -11,11 +11,13 @@ This is a small Python project that I made in 3 days or so, I don't really remem
 This bot will send a random dog image from the **dog.ceo** API if you hit the route **/post** with the following parameters:
 
 ``?pass={PASSWORD}``: the password so you can prevent others from abusing your thing
+
 ``?type=img``: specify that the type is img (image)
 
 This bot will ALSO send a random quote from the **Quotable API** if you hit the route **/post** with the following parameters:
 
 ``?pass={PASSWORD}``: the password so you can prevent others from abusing your thing
+
 ``?type=text``: specify that the type is text
 
 # SETUP
