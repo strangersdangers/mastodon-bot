@@ -8,7 +8,7 @@ app = Flask(__name__)
 mastodon = Mastodon(api_base_url = os.getenv('INSTURL'), access_token = os.getenv('TOKEN'))
 
 def mentions(status):
-  if mastodon.account_verify_credentials().acct + ' you' in status.content:
+  if mastodon.account_verify_credentials().acct in status.content:
     mastodon.status_reply(status, "Testing, hey!", status.id, untag=True)
 @app.route('/')
 def home():
