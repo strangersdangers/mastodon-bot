@@ -1,4 +1,4 @@
-# The code for @dogpictures@convo.casa on Mastodon!
+# The code for @dogsnquotes@toot.community on Mastodon!
 
 # Acknowledgements
 This code used the **Quotable API**, which was generously provided by **Luke Peavey**, and you can [support him here](https://github.com/sponsors/lukePeavey)!
