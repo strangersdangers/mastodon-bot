@@ -32,7 +32,7 @@ def post():
     if type == 'text':
       randomquote = requests.get("https://api.quotable.io/quotes/random")
       data = randomquote.json()
-      quote = f"A quote to start your day:\n \"{data[0]['content']}\" -{data[0]['author']}"
+      quote = f"A quote to start your day:\n\"{data[0]['content']}\"\n-{data[0]['author']}"
       mastodon.toot(quote)
       return 'posted text'
     elif type == 'img':
