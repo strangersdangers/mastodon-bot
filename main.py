@@ -9,7 +9,7 @@ mastodon = Mastodon(api_base_url = os.getenv('INSTURL'), access_token = os.geten
 
 def mentions(status):
   if "@dogpictures" in status.content:
-    mastodon.status_reply(status, "Testing, hey!", status.id, untag=True)
+    mastodon.status_post('@' + status.account.username + ' testing')
     #end
 @app.route('/')
 def home():
