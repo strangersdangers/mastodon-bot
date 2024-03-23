@@ -1,4 +1,4 @@
-# The code for @dogpictures@convo.casa!
+# The code for @dogpictures@convo.casa on Mastodon!
 
 # Acknowledgements
 This code used the **Quotable API** which was generously provided by **Luke Peavey**, you can [support him here](https://github.com/sponsors/lukePeavey)!
@@ -33,7 +33,7 @@ I recommend you to follow this **[guide](https://dev.to/botwiki/introduction-to-
 
 **Posting schedule**
 
-The cons is that in the code, there is **no function for the bot to post on a schedule**, but you can use cron-job services online like [cron-job.org](console.cron-job.org)!
+The cons is that in the code, there is **no function for the bot to post on a schedule**. And yes, I am aware thatthere is a parameter called ``scheduled_at``, but that is not convenient to me at all, and that cron-job services are more convenient and more customizable. You can use cron-job services online like [cron-job.org](console.cron-job.org)! 
 
 # License
 This **code** uses the *MIT License*.
