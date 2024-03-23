@@ -7,10 +7,6 @@ import requests
 app = Flask(__name__)
 mastodon = Mastodon(api_base_url = os.getenv('INSTURL'), access_token = os.getenv('TOKEN'))
 
-def mentions(status):
-  if '@dogpictures' in status.content:
-    mastodon.status_post('@' + status.account.username + ' hey, testing')
-    #end
 @app.route('/')
 def home():
   return "<h1>" + "Website proudly hosted by cyclic!" + "</h1>"
@@ -46,11 +42,10 @@ def post():
       image = imagetoget.content
       print(data2)
       id = mastodon.media_post(image, 'image/png').id
-      mastodon.status_post("New dog picture for you!", media_ids=id)
+      mastodon.status_post("dog picture for you\n provided by dog.ceo", media_ids=id)
       return 'posted img'
     elif type is None:
       return "yooo"
       #end.. or is it?
-mastodon.stream_user(mentions)
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=3000) #use waitress-serve or uvicorn for production
