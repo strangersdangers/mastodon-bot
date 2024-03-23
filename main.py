@@ -7,6 +7,9 @@ import requests
 app = Flask(__name__)
 mastodon = Mastodon(api_base_url = os.getenv('INSTURL'), access_token = os.getenv('TOKEN'))
 
+def mentions(status):
+  if mastodon.account_verify_credentials().acct + 'you' in status.content:
+    mastodon.status_reply(status, "Testing, hey!", status.id, untag=True)
 @app.route('/')
 def home():
   return "<h1>" + "Website proudly hosted by cyclic!" + "</h1>"
@@ -32,7 +35,7 @@ def post():
     if type == 'text':
       randomquote = requests.get("https://api.quotable.io/quotes/random")
       data = randomquote.json()
-      quote = f"woke up from my break just to post this. heres a quote for yall: {data[0]['content']} -{data[0]['author']}"
+      quote = f"A quote to start your day:\n {data[0]['content']} -{data[0]['author']}"
       mastodon.toot(quote)
       return 'posted text'
     elif type == 'img':
