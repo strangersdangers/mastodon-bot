@@ -7,6 +7,9 @@ import requests
 app = Flask(__name__)
 mastodon = Mastodon(api_base_url = os.getenv('INSTURL'), access_token = os.getenv('TOKEN'))
 
+testing = mastodon.account_verify_credentials().acct
+print(testing)
+
 @app.route('/')
 def home():
   return "<h1>" + "Website proudly hosted by cyclic!" + "</h1>"
@@ -48,4 +51,4 @@ def post():
       return "yooo"
       #end.. or is it?
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=3000)
+    app.run(host='0.0.0.0', port=3000) #use waitress-serve or uvicorn for production
