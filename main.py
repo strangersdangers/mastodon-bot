@@ -9,7 +9,7 @@ mastodon = Mastodon(api_base_url = os.getenv('INSTURL'), access_token = os.geten
 
 @app.route('/')
 def home():
-  return "<h1>" + "Website proudly hosted by cyclic!" + "</h1>"
+  return "<h1>" + "Website proudly hosted on cyclic.sh!" + "</h1>"
   #end
 @app.route('/post')
 def post():
@@ -42,7 +42,7 @@ def post():
       image = imagetoget.content
       print(data2)
       id = mastodon.media_post(image, 'image/png').id
-      mastodon.status_post("new dog picture for you\nprovided by dog.ceo (thanks!)", media_ids=id)
+      mastodon.status_post("new dog picture for you!\nprovided by dog.ceo (thanks!)\n#dogs", media_ids=id)
       return 'posted img'
     elif type is None:
       return "yooo"
