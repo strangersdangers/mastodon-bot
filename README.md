@@ -2,7 +2,7 @@
 
 # Acknowledgements
 This code used the **Quotable API**, which was generously provided by **Luke Peavey**, and you can [support him here](https://github.com/sponsors/lukePeavey)!
-The code also used [dog.ceo](dog.ceo/dog-api)'s API to get the dog images, so please [donate to them here](https://paypal.me/dogapi)!
+The code also used [dog.ceo](https://dog.ceo/dog-api)'s API to get the dog images, so please [donate to them here](https://paypal.me/dogapi)!
 
 # What is this?
 This is a small Python project that I made in 3 days or so, I don't really remember! I was inspired to create a Mastodon bot after discovering that you can make bots on Mastodon! 
