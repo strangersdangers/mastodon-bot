@@ -10,6 +10,7 @@ mastodon = Mastodon(api_base_url = os.getenv('INSTURL'), access_token = os.geten
 def mentions(status):
   if mastodon.account_verify_credentials().acct in status.content:
     mastodon.status_reply(status, "Testing, hey!", status.id, untag=True)
+    #end
 @app.route('/')
 def home():
   return "<h1>" + "Website proudly hosted by cyclic!" + "</h1>"
