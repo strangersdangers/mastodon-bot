@@ -50,6 +50,6 @@ def post():
     elif type is None:
       return "yooo"
       #end.. or is it?
-mastodon.stream_user(handle_mention)
+mastodon.stream_user(mentions)
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=3000) #use waitress-serve or uvicorn for production
