@@ -8,8 +8,8 @@ app = Flask(__name__)
 mastodon = Mastodon(api_base_url = os.getenv('INSTURL'), access_token = os.getenv('TOKEN'))
 
 def mentions(status):
-  if "@dogpictures" in status.content:
-    mastodon.status_post('@' + status.account.username + ' testing')
+  if '@dogpictures' in status.content:
+    mastodon.status_post('@' + status.account.username + ' hey, testing')
     #end
 @app.route('/')
 def home():
