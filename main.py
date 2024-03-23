@@ -7,10 +7,9 @@ import requests
 app = Flask(__name__)
 mastodon = Mastodon(api_base_url = os.getenv('INSTURL'), access_token = os.getenv('TOKEN'))
 
-testing = mastodon.account_verify_credentials().acct
-
 @app.route('/')
 def home():
+  testing = mastodon.account_verify_credentials().acct
   return "<h1>" + "Website proudly hosted by cyclic!" + "</h1>"
   print(f"ATTENTION: {testing}")
   #end
